@@ -1,0 +1,82 @@
+/*1 */
+/*select countries.name, languages.language , languages.percentage
+from countries
+left join languages
+on (countries.code = languages.country_code)
+*/
+
+/*2*/
+/*  select
+count(cities.name) as cnt
+,countries.name
+from countries
+left join cities on countries.code = cities.country_code
+group by countries.name
+order by cnt desc*/
+
+/*3*/
+/*select cities.name, cities.population
+from
+cities
+join countries
+on cities.country_id = countries.id
+where
+countries.name = 'Mexico'
+and
+cities.population > 500000
+order by population desc*/
+
+/*4*/
+/*select
+languages.language
+, countries.name
+,  languages.percentage
+from
+countries
+join languages on
+    countries.id = languages.country_id
+where languages.percentage > 89
+order by 3 desc;*/
+
+/*5*/
+/*select surface_area
+, population
+, name
+from countries
+where surface_area < 501
+and population > 100000
+*/
+
+/*6*/
+/*select government_form
+, name
+, life_expectancy
+, capital
+from countries
+where capital > 200
+and
+life_expectancy < 75 */
+
+/*7*/
+/*select
+countries.name country
+, cities.name city
+, cities.district
+, cities.population
+from
+countries
+join cities
+on countries.id = cities.country_id
+where
+countries.name = 'Argentina'
+and district = 'Buenos Aires'
+and cities.population > 500000
+
+*/
+
+/*8*/
+/*select count(*)
+,region
+from countries
+group by region
+order by 1 desc*/
